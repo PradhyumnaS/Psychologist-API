@@ -155,6 +155,11 @@ def set_cached_response(user_id, message, response):
     cache_key = f"response_cache:{user_id}:{hash(message)}"
     redis_conn.set(cache_key, response, ex=3600)  
 
+# --- ROOT ENDPOINT ---
+@app.get("/")
+def root():
+    return {"Status": "NeuroSphere Therapist API is running."}
+
 # --- CHAT ENDPOINT ---
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(req: ChatRequest):
