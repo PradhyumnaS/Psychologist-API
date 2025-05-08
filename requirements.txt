@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pydantic
+redis
+pandas
+scikit-learn
+gtts
+google-generativeai
+python-dotenv
