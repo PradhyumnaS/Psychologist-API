@@ -14,6 +14,7 @@ from gtts import gTTS
 import google.generativeai as genai
 from reinforcement import PromptOptimizationRL
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 
 # --- CONFIG ---
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
@@ -38,6 +39,14 @@ MAX_HISTORY_LENGTH = 10
 
 # --- FASTAPI APP ---
 app = FastAPI(title="NeuroSphere Therapist API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # --- MODELS ---
 class ChatRequest(BaseModel):
