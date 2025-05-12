@@ -1,3 +1,5 @@
 /__pycache__/
 .env
 /q_tables
+/tests/__pycache__/
+/tests/data/test_qtables/

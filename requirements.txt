@@ -7,3 +7,8 @@ scikit-learn
 gtts
 google-generativeai
 python-dotenv
+pytest
+pytest-asyncio
+httpx
+pytest-mock
+aioredis
