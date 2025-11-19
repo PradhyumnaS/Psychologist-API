@@ -18,7 +18,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # --- CONFIG ---
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-2.5-flash"
 KB_PATH = "./kb.csv"
 Q_TABLE_DIR = "./q_tables"
 os.makedirs(Q_TABLE_DIR, exist_ok=True)
